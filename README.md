@@ -8,3 +8,12 @@ This is an application where the user enters a word then it is encrypted and aft
 
 ##### Technologies 
 Java 
+##### Project Set Up Instructions
+* Folk Project 
+* Select account name 
+* Git clone 
+* Extract zip file
+* Open file on local computer
+
+###### Licence 
+MIT https://opensource.org/licenses/MIT
