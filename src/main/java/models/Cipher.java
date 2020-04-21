@@ -17,22 +17,22 @@ public class Cipher {
 
     }
     public String messageInput(){
-        for (int r = 0; r < messageInput.length(); r++){
-            if (Character.isUpperCase(messageInput.charAt(r))){
-                int newCharValue = ((int)(messageInput.charAt(r)) + shiftKey-65) % 26 +65;
+        for (int i = 0; i < messageInput.length(); i++){
+            if (Character.isUpperCase(messageInput.charAt(i))){
+                int newCharValue = ((int)(messageInput.charAt(i)) + shiftKey-65) % 26 +65;
                 char encryptedChar =(char)(newCharValue);
                 String encryptedString = Character.toString(encryptedChar);
                 messageOutput.add(encryptedString);
             }
-            else if (Character.isLowerCase(messageInput.charAt(r))){
-                int newCharValue = ((int)(messageInput.charAt(r))+ shiftKey -97)% 26 + 97;
+            else if (Character.isLowerCase(messageInput.charAt(i))){
+                int newCharValue = ((int)(messageInput.charAt(i))+ shiftKey -97)% 26 + 97;
                 char encryptedChar = (char)(newCharValue);
                 String encryptedString = Character.toString(encryptedChar);
 
                 messageOutput.add(encryptedString);
             }
             else{
-                String cipheredString = Character.toString(messageInput.charAt(r));
+                String cipheredString = Character.toString(messageInput.charAt(i));
                 messageOutput.add(cipheredString);
             }
         }
