@@ -1,4 +1,5 @@
 import models.Cipher;
+import models.Decipher;
 
 import  models.*;
 
@@ -13,12 +14,13 @@ public class App {
         boolean programRunning = true;
 
         Cipher encrypt = new Cipher("", 0);
-        Cipher decrypt = new Cipher("", 0);
+        Decipher decrypt = new Decipher("", 0);
 
         while (programRunning) {
             System.out.println("Welcome to Caesar's Cipher!");
             System.out.println("Encrypt");
             System.out.println("Decrypt");
+            //String results = "";
             try {
                 String choice = bufferedReader.readLine();
                 if (choice.equals("Encrypt")) {
@@ -31,7 +33,9 @@ public class App {
                     encrypt.setMessage(messageInput);
                     encrypt.setShiftKey(inputKey);
                     String encryptingResult = encrypt.messageInput();
+                    //results = results + encrypt.messageInput();
                     System.out.println("Encrypted message:" + encryptingResult);
+                    //System.out.println("Encrypted message:" + results);
                 } else if (choice.equals("Decrypt")) {
                     System.out.println("Enter the message to decrypted");
                     String messageInput = bufferedReader.readLine();
@@ -39,10 +43,11 @@ public class App {
                     String stringInputKey = bufferedReader.readLine();
                     int inputKey = Integer.parseInt(stringInputKey);
 
-                    decrypt.setMessage(messageInput);
-                    decrypt.setShiftKey(inputKey);
-                    String decryptingResult = decrypt.messageInput();
+                    decrypt.setUserText(messageInput);
+                    decrypt.setDecipherKey(inputKey);
+                    String decryptingResult = decrypt.decipherUserText();
                     System.out.println("Decrypted message:" + decryptingResult);
+
                 }
             else {
                 System.out.println("Try again!");
