@@ -44,11 +44,10 @@ public class Cipher {
   }
 
 
-    public int getShiftKey(){
+    public int getShiftKey() {
 //        this.shiftKey = Cipher.getShiftKey();
         return this.shiftKey;
-  }
-
+    }
 
   public String setMessage(String messageInput){
         return  this.messageInput = messageInput;
