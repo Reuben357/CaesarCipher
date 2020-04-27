@@ -15,13 +15,13 @@ public class Decipher {
     public String decipherUserText(){
         for (int i= 0; i < userText.length(); i++){
             if (Character.isUpperCase(userText.charAt(i))){
-                int newCharValue = ((int)(userText.charAt(i)) + decipherKey-65) % 26 +65;
+                int newCharValue = ((int)(userText.charAt(i)) + (26 - decipherKey) -65) % 26 +65;
                 char decryptedChar =(char)(newCharValue);
                 String decryptedString = Character.toString(decryptedChar);
                 decipheredOutput.add(decryptedString);
             }
             else if (Character.isLowerCase(userText.charAt(i))){
-                int newCharValue = ((int)(userText.charAt(i))+ decipherKey -97)% 26 + 97;
+                int newCharValue = ((int)(userText.charAt(i))+ (26 - decipherKey) -97)% 26 + 97;
                 char decryptedChar = (char)(newCharValue);
                 String decryptedString = Character.toString(decryptedChar);
 
